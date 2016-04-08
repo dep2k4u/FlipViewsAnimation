@@ -31,15 +31,14 @@ class ViewController: UIViewController {
     
     @IBAction func tapped(sender: AnyObject) {
        
-       // frontView.userInteractionEnabled = true
+
        
         if (showingFront) {
           
             self.backView = returnCopyOfView(self.backViewPermanent)
             UIView.transitionFromView(self.frontView, toView: self.backView, duration: 01, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
                  self.showingFront = false
-                 //self.view.addSubview(self.frontView)
-                // self.view.sendSubviewToBack(self.frontView)
+       
                     
         }
         
@@ -49,8 +48,7 @@ class ViewController: UIViewController {
             self.frontView = returnCopyOfView(self.frontViewPermanent)
             UIView.transitionFromView(self.backView, toView: self.frontView, duration: 01, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
                 self.showingFront = true
-//                self.view.addSubview(self.backView)
-//                self.view .sendSubviewToBack(self.backView)
+
             
             }
     
